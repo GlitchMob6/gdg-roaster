@@ -1,64 +1,26 @@
-import type {
-  Metadata
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-from "next";
-
-import {
-  Space_Grotesk,
-  JetBrains_Mono
+* {
+  box-sizing: border-box;
 }
 
-from "next/font/google";
-import "./globals.css";
-
-import {
-  APP
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-from "@/config/app.config";
-
-const spaceGrotesk=Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-});
-
-const jetBrainsMono=JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata= {
-  title: APP.name,
-    description: APP.description,
+body {
+  background: var(--background);
+  color: var(--foreground);
 }
 
-;
-
-export default function RootLayout({
-  children,
-}
-
-: Readonly< {
-  children: React.ReactNode;
-}
-
->) {
-  return (<html lang="en" > <body className= {
-      `$ {
-        spaceGrotesk.variable
-      }
-
-      $ {
-        jetBrainsMono.variable
-      }
-
-      `
-    }
-
-    > {
-      children
-    }
-
-    </body> </html>);
+a {
+  color: inherit;
+  text-decoration: none;
 }
