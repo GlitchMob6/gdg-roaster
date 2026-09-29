@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@source "../app";
+@source "../components";
+
+@theme {
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-jetbrains-mono: var(--font-jetbrains-mono);
+  
+  --color-cream: #F8F4EC;
+  --color-lavender: #EFF2FB;
+  --color-pale-yellow: #F7E3A8;
+  
+  --color-ink: #141414;
+  --color-white: #FFFFFF;
+  
+  --color-mustard: #EDB13E;
+  
+  --color-google-blue: #4C80F0;
+  --color-google-red: #D9503F;
+  --color-google-green: #4FA35A;
+  --color-google-yellow: #EDB13E;
+  
+  --color-muted-ink: #66625B;
+  --color-editor-bg: #171717;
+  --color-editor-ink: #F7F3EA;
+  
+  /* Map previous theme variables to the new ones for backward compatibility where needed */
+  --color-frame: #141414;
+  --color-canvas: #F8F4EC;
+  --color-panel: #FFFFFF;
+  --color-subtle: #F7E3A8;
+  --color-accent: #EDB13E;
+}
+
+@theme inline {
+  --color-cream: #F8F4EC;
+  --color-lavender: #EFF2FB;
+  --color-pale-yellow: #F7E3A8;
+  --color-ink: #141414;
+  --color-white: #FFFFFF;
+  --color-mustard: #EDB13E;
+  --color-google-blue: #4C80F0;
+  --color-google-red: #D9503F;
+  --color-google-green: #4FA35A;
+  --color-google-yellow: #EDB13E;
+  --color-muted-ink: #66625B;
+  --color-editor-bg: #171717;
+  --color-editor-ink: #F7F3EA;
+  
+  --color-frame: #141414;
+  --color-canvas: #F8F4EC;
+  --color-panel: #FFFFFF;
+  --color-subtle: #F7E3A8;
+  --color-accent: #EDB13E;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink);
+  border-radius: 999px;
+}
+/* Rebuild */

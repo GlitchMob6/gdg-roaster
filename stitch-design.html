@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CODE ROASTER · DevFest Nashik 2026</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#dae2ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#7d5700",
+            "background": "#fcf9f8",
+            "surface-variant": "#e5e2e1",
+            "primary-container": "#edb13e",
+            "surface-container-high": "#ebe7e7",
+            "inverse-primary": "#fabc48",
+            "on-error-container": "#93000a",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed-variant": "#43474e",
+            "secondary": "#5a5f66",
+            "primary": "#7d5700",
+            "inverse-surface": "#313030",
+            "secondary-fixed": "#dfe2eb",
+            "on-primary-fixed": "#271900",
+            "surface-container-highest": "#e5e2e1",
+            "surface-dim": "#dcd9d9",
+            "on-tertiary-fixed": "#001946",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#ffdeaa",
+            "tertiary-fixed-dim": "#b1c5ff",
+            "on-secondary-fixed": "#181c22",
+            "tertiary": "#1658c7",
+            "surface-container": "#f0edec",
+            "error-container": "#ffdad6",
+            "surface-container-low": "#f6f3f2",
+            "on-surface-variant": "#504535",
+            "on-secondary-container": "#60646c",
+            "tertiary-container": "#a0baff",
+            "secondary-container": "#dfe2eb",
+            "surface-bright": "#fcf9f8",
+            "on-error": "#ffffff",
+            "secondary-fixed-dim": "#c3c6cf",
+            "outline-variant": "#d4c4af",
+            "primary-fixed-dim": "#fabc48",
+            "on-primary-fixed-variant": "#5f4100",
+            "on-tertiary-fixed-variant": "#00419e",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#f3f0ef",
+            "on-tertiary": "#ffffff",
+            "on-background": "#1c1b1b",
+            "on-primary-container": "#644500",
+            "surface": "#fcf9f8",
+            "on-surface": "#1c1b1b",
+            "outline": "#827563",
+            "on-tertiary-container": "#0045a6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2.5rem",
+            "space-lg": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.75rem",
+            "space-xl": "3rem",
+            "gutter-mobile": "1rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.375rem",
+            "space-md": "1.25rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "display-hero": ["Space Grotesk"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Space Grotesk"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-code": ["JetBrains Mono"],
+            "headline-sm": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "label-badge": ["JetBrains Mono"],
+            "display-hero-mobile": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-md": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "label-code": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #f0edec;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #1c1b1b;
+      border-radius: 4px;
+    }
+    .warli-pattern-bg {
+      background-image: radial-gradient(#1c1b1b 1px, transparent 1px), radial-gradient(#edb13e 1px, transparent 1px);
+      background-size: 28px 28px;
+      background-position: 0 0, 14px 14px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface warli-pattern-bg min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container" style="background-color: #F8F4EC;">
+<!-- ================= TOP NAV BAR (Shared Component) ================= -->
+<header class="sticky top-4 z-50 rounded-full mx-auto max-w-6xl w-[calc(100%-2rem)] bg-surface-container-lowest border-[3px] border-on-surface shadow-[4px_4px_0px_#1c1b1b] my-4">
+<div class="flex justify-between items-center w-full px-5 py-2.5 max-w-6xl mx-auto">
+<!-- Brand & Community Identity -->
+<div class="flex items-center gap-3">
+<a class="flex items-center hover:opacity-90 transition-opacity" href="#"><img alt="GDG Nashik" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQd7uPfF2Dw7-3slb9FBVfglA7BiBcl7epObymoTD3GG12SfT4WywaUKlofEZtbf9TMPxNn0QK2h8wt4HgfBNVaTT-R7cQrVkPa3xM9oMVK1XODjOXZdTTSyn2Uu8Ix7CJdnm-RJxtMJ47Bz97Yh-VZXrurgGPMKvy-RwsX3A_uhqiF1zgki8UVY130D83K63fIKXbqraEl4RdjyIN1bdUX4BKKhdtjVK9dF-IyiAwG9_BLaFMgGPPp5wAueDnlPfBJQo4a1Rcqu2n"/></a>
+<div class="flex items-center gap-1.5">
+<span class="text-headline-sm font-headline-sm font-extrabold text-on-surface uppercase tracking-tight">CODE ROASTER</span>
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<!-- Navigation Links (Arena Active) -->
+<nav class="hidden md:flex items-center gap-2">
+<a class="text-on-surface font-headline-sm font-bold bg-primary-container text-on-primary-container px-3 py-1 rounded-full border-2 border-on-surface hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-150 active:translate-x-0.5 active:translate-y-0.5" href="#arena">
+          Arena
+        </a>
+<a class="text-on-surface-variant font-body-md font-medium hover:text-on-surface px-3 py-1 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-150" href="#hall-of-flame">
+          Hall of Flame
+        </a>
+<a class="text-on-surface-variant font-body-md font-medium hover:text-on-surface px-3 py-1 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-150" href="#masala-metrics">
+          Masala Metrics
+        </a>
+<a class="text-on-surface-variant font-body-md font-medium hover:text-on-surface px-3 py-1 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-150" href="#devfest-guide">
+          DevFest Guide
+        </a>
+</nav>
+<!-- Trailing Action Badges -->
+<div class="flex items-center gap-3">
+<div class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full border-2 border-on-surface bg-surface-container-lowest shadow-[2px_2px_0px_#1c1b1b]"><img alt="DevFest Nashik 2026" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-llFH_mHzqAfbIrzZmS6ULS8zShSAED22VxL1c5WVIUOVU7MmDxf25Rv5vBc3Nl8iuKxrQ91QbbDIGvkSUdRM4dOFDoy0OVG6DwMO5mQFQFLpVao53cy8pKNxyZylMW1O64Z2nf25KIewqBcouh2UzBiQeJKAqEh7IevJxhJ-9v8xJuZId2JVwIhmNaHleZFzTcukp6gTzkFrXdDPucbFwcPWZOCjDg_LScQs29UDEH5EbsCHaKEPRKSj_xdXpTAeXLF9yEBrC56n"/></div>
+<button class="flex items-center gap-1.5 bg-primary-container text-on-primary-container font-headline-sm text-label-code px-3.5 py-1.5 rounded-full border-2 border-on-surface shadow-[2px_2px_0px_#1c1b1b] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 transition-transform" id="navRoastCTA">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Roast Me / भाजून काढ 🔥</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ================= MAIN CONTENT WRAPPER ================= -->
+<main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4">
+<!-- HERO SECTION -->
+<section class="text-center py-6 sm:py-8 relative">
+<!-- Decorative Warli / Regional Neo-Brutalist Badges (Scrapbook Stacking) -->
+<div class="hidden lg:flex absolute left-4 top-2 -rotate-6 bg-secondary-fixed border-[2.5px] border-on-surface px-3 py-2 rounded-[14px] shadow-[4px_4px_0px_#1c1b1b] items-center gap-2">
+<span class="text-2xl">☕</span>
+<div class="text-left leading-tight">
+<p class="font-label-badge text-[10px] text-on-surface uppercase font-extrabold tracking-wider">Tapri Break</p>
+<p class="font-headline-sm text-body-sm text-on-surface font-bold">Cutting Chai #4</p>
+</div>
+</div>
+<div class="hidden lg:flex absolute right-6 top-4 rotate-6 bg-primary-fixed border-[2.5px] border-on-surface px-3 py-2 rounded-[14px] shadow-[4px_4px_0px_#1c1b1b] items-center gap-2">
+<span class="text-2xl">🌶️</span>
+<div class="text-left leading-tight">
+<p class="font-label-badge text-[10px] text-on-surface uppercase font-extrabold tracking-wider">Spicy Scale</p>
+<p class="font-headline-sm text-body-sm text-on-surface font-bold">झणझणीत / 100%</p>
+</div>
+</div>
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-2 bg-primary-fixed border-2 border-on-surface px-4 py-1.5 rounded-full shadow-[3px_3px_0px_#1c1b1b] mb-4">
+<span class="material-symbols-outlined text-[#D9503F] text-sm" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-badge text-label-badge font-bold text-on-surface">CODE BOL RAHA HAI · मला वाचवा! 🚨</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero font-extrabold text-on-surface tracking-tight uppercase flex items-center justify-center gap-3 flex-wrap">
+<span>Code</span>
+<span class="relative inline-block px-3 py-1 bg-primary-container border-[3px] border-on-surface rounded-xl shadow-[4px_4px_0px_#1c1b1b] -rotate-1">
+          Roaster
+        </span>
+<span class="text-primary-container font-label-code text-headline-md md:text-headline-lg font-bold">v2.6</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-3">
+        Turn spicy spaghetti code into Nashik Misal-grade perfection. Drop your snippet, pick your roast spice level, and get roasted with merciless algorithmic love!
+      </p>
+<!-- Conference Event Ticker Mini -->
+<div class="flex items-center justify-center gap-4 mt-4 font-label-badge text-[11px] text-on-surface-variant uppercase tracking-wider flex-wrap">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-on-surface"></span> DevFest Nashik 2026 Special</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#EDB13E]"></span> Godavari River Valley Edition</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#4C80F0]"></span> Multi-Language AI Linter</span>
+</div>
+</section>
+<!-- ================= THE CORE TOOL CONTAINER (Split Pane Bento) ================= -->
+<section class="bg-surface-container-lowest rounded-[22px] border-[3px] border-on-surface shadow-[6px_6px_0px_#1c1b1b] overflow-hidden my-4">
+<!-- TOP INTEGRATED CONTROL BAR -->
+<div class="bg-surface-container border-b-[3px] border-on-surface p-4 flex flex-wrap items-center justify-between gap-4">
+<!-- Spice Level Segmented Pill -->
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase text-on-surface font-extrabold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">tune</span> SPICE LEVEL:
+          </span>
+<div class="inline-flex bg-surface-container-lowest p-1 rounded-full border-2 border-on-surface shadow-[2px_2px_0px_#1c1b1b]">
+<button class="spice-btn px-3 py-1 rounded-full font-label-code text-body-sm text-on-surface font-semibold hover:bg-surface-container-high transition-colors" data-spice="mild" type="button">
+              Halka 🟢
+            </button>
+<button class="spice-btn px-3 py-1 rounded-full font-label-code text-body-sm text-on-surface font-semibold hover:bg-surface-container-high transition-colors" data-spice="medium" type="button">
+              Tikha 🟡
+            </button>
+<button class="spice-btn active-spice px-3 py-1 rounded-full font-label-code text-body-sm font-bold bg-primary-container text-on-primary-container border-2 border-on-surface shadow-[2px_2px_0px_#1c1b1b]" data-spice="extreme" type="button">
+              Zanzanit 🔥
+            </button>
+</div>
+</div>
+<!-- Dropdowns: Persona & Language & Error Message -->
+<div class="flex items-center flex-wrap gap-2.5">
+<!-- Persona Selector -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border-2 border-on-surface rounded-full pl-3 pr-8 py-1.5 font-label-code text-body-sm font-bold text-on-surface shadow-[2px_2px_0px_#1c1b1b] focus:outline-none cursor-pointer" id="personaSelect">
+<option value="kaka">Nashik Senior Dev (काका Mode)</option>
+<option value="staff">Ruthless L7 Staff Eng</option>
+<option value="intern">Intern with Cutting Chai</option>
+<option value="purist">StackOverflow Purist</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface text-base pointer-events-none">expand_more</span>
+</div>
+<!-- Language Selector -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border-2 border-on-surface rounded-full pl-3 pr-8 py-1.5 font-label-code text-body-sm font-bold text-on-surface shadow-[2px_2px_0px_#1c1b1b] focus:outline-none cursor-pointer" id="languageSelect">
+<option value="js">JavaScript / TypeScript</option>
+<option value="py">Python</option>
+<option value="go">Go</option>
+<option value="rust">Rust</option>
+<option value="java">Java</option>
+<option value="cpp">C++</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface text-base pointer-events-none">expand_more</span>
+</div>
+<!-- Error Message Toggle Chip -->
+<button class="flex items-center gap-1.5 bg-secondary-fixed border-2 border-on-surface px-3 py-1.5 rounded-full font-label-code text-body-sm font-bold text-on-surface shadow-[2px_2px_0px_#1c1b1b] hover:bg-secondary-fixed-dim transition-colors" id="toggleErrorBtn">
+<span class="material-symbols-outlined text-sm">bug_report</span>
+<span>+ ERROR LOG</span>
+</button>
+</div>
+<!-- Primary Roast CTA -->
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-headline-sm text-body-md font-extrabold px-6 py-2 rounded-full border-[3px] border-on-surface shadow-[4px_4px_0px_#1c1b1b] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 transition-all" id="roastTriggerBtn">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span>Roast Me / भाजून काढ 🔥 →</span>
+</button>
+</div>
+<!-- SPLIT PANE BODY -->
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[580px]">
+<!-- ================= LEFT PANE (INPUT // SRC) ================= -->
+<div class="lg:col-span-6 border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-on-surface p-4 sm:p-5 flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<!-- Left Header Strip -->
+<div class="flex items-center justify-between pb-3 mb-3 border-b-2 border-on-surface">
+<div class="flex items-center gap-2">
+<span class="bg-surface-variant font-label-badge text-label-badge font-bold px-2 py-0.5 rounded border border-on-surface">INPUT // SRC</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">YOUR CODE</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 bg-primary-fixed hover:bg-primary-container border-2 border-on-surface rounded-full font-label-code text-body-sm font-bold text-on-surface shadow-[2px_2px_0px_#1c1b1b] transition-transform active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-1" id="loadSampleBugBtn">
+<span class="material-symbols-outlined text-xs">code</span>
+<span>SAMPLE BUG</span>
+</button>
+<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high border-2 border-on-surface rounded-full font-label-code text-body-sm font-bold text-on-surface shadow-[2px_2px_0px_#1c1b1b] transition-transform active:translate-x-0.5 active:translate-y-0.5" id="clearEditorBtn">
+                  CLEAR
+                </button>
+</div>
+</div>
+<!-- Terminal Window Header -->
+<div class="bg-surface-container border-2 border-on-surface rounded-t-[14px] px-3 py-2 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-[#D9503F] border border-on-surface"></span>
+<span class="w-3 h-3 rounded-full bg-[#EDB13E] border border-on-surface"></span>
+<span class="w-3 h-3 rounded-full bg-[#4FA35A] border border-on-surface"></span>
+<span class="ml-2 font-label-code text-label-badge text-on-surface font-semibold">spaghetti_cart.ts</span>
+</div>
+<span class="font-label-badge text-[11px] text-on-surface-variant font-mono">UTF-8 · LF</span>
+</div>
+<!-- Interactive Editor Container -->
+<div class="relative bg-surface-container-low border-x-2 border-b-2 border-on-surface rounded-b-[14px] shadow-[4px_4px_0px_#1c1b1b] flex overflow-hidden">
+<!-- Line Numbers Gutter -->
+<div class="bg-surface-container-high px-2.5 py-3 select-none text-right font-label-code text-body-sm text-secondary border-r-2 border-on-surface flex flex-col space-y-1">
+<span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+<span>06</span><span>07</span><span>08</span><span>09</span><span>10</span>
+<span>11</span><span>12</span><span>13</span><span>14</span>
+</div>
+<!-- Code Input Textarea -->
+<textarea class="w-full h-80 p-3 bg-surface-container-lowest font-label-code text-body-sm text-on-surface focus:outline-none resize-none leading-6 custom-scroll" id="codeEditorArea" spellcheck="false">async function calculateMisalDiscount(cart) {
+  // TODO: Fix production memory leak before DevFest demo!
+  let total = 0;
+  cart.items.forEach(async (item) =&gt; {
+    const freshPrice = await fetch('/api/misal-rate/' + item.id);
+    total += freshPrice.data.amount * item.quantity;
+  });
+
+  if (total == "NaN" || cart.user.coupon.code == undefined) {
+    return total; // 🌶️ what is typing anyway?
+  }
+  return total - cart.user.discount;
+}</textarea>
+</div>
+<!-- Optional Collapsible Error Input Box -->
+<div class="mt-3 hidden" id="errorInputWrapper">
+<div class="bg-error-container border-2 border-on-surface rounded-[14px] p-2.5 shadow-[3px_3px_0px_#1c1b1b]">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-code text-label-badge text-on-error-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">warning</span> RUNTIME STACKTRACE / ERROR CONSOLE:
+                  </span>
+<button class="text-on-error-container font-bold text-sm" id="closeErrorInput">✕</button>
+</div>
+<input class="w-full bg-surface-container-lowest border-2 border-on-surface rounded-lg p-2 font-label-code text-body-sm text-on-surface focus:outline-none" id="errorInputField" placeholder="TypeError: Cannot read properties of undefined (reading 'code')..." type="text" value="Uncaught TypeError: Cannot read properties of undefined (reading 'code') at line 9:31"/>
+</div>
+</div>
+</div>
+<!-- Left Footer Metadata Strip -->
+<div class="mt-4 pt-3 border-t-2 border-on-surface flex flex-wrap items-center justify-between gap-2 text-on-surface">
+<div class="flex items-center gap-2">
+<span class="font-label-code text-body-sm font-semibold">14 lines · 392 chars</span>
+<span class="bg-error-container text-on-error-container font-label-badge text-[11px] font-bold px-2 py-0.5 rounded-full border border-on-surface">
+                TS strict: OFF ⚠️
+              </span>
+</div>
+<button class="flex items-center gap-1 font-label-code text-body-sm font-bold bg-surface-container hover:bg-surface-container-high border-2 border-on-surface px-2.5 py-1 rounded-full shadow-[2px_2px_0px_#1c1b1b]" id="pasteCodeBtn">
+<span class="material-symbols-outlined text-xs">content_paste</span>
+<span>PASTE (⌘+V)</span>
+</button>
+</div>
+</div>
+<!-- ================= RIGHT PANE (AUDIT // REPORT) ================= -->
+<div class="lg:col-span-6 p-4 sm:p-5 flex flex-col justify-between bg-surface-container-low" id="roastReportPane">
+<!-- Right Header Strip -->
+<div>
+<div class="flex items-center justify-between pb-3 mb-3 border-b-2 border-on-surface">
+<div class="flex items-center gap-2">
+<span class="bg-[#4C80F0] text-on-primary font-label-badge text-label-badge font-bold px-2 py-0.5 rounded border border-on-surface">AUDIT // REPORT</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">ROAST REPORT</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-badge text-label-badge font-bold px-2.5 py-1 rounded-full border-2 border-on-surface bg-primary-fixed shadow-[2px_2px_0px_#1c1b1b]" id="reportStatusBadge">
+<span class="w-2 h-2 rounded-full bg-on-surface animate-ping"></span>
+<span>STATUS: READY FOR HEAT ⚡</span>
+</div>
+</div>
+<!-- READY STATE (BEFORE ROASTING) -->
+<div class="space-y-4" id="readyStateContainer">
+<!-- Warli Starburst Doodle Graphic Card -->
+<div class="bg-surface-container-lowest border-2 border-on-surface rounded-[18px] p-5 shadow-[4px_4px_0px_#1c1b1b] text-center relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-9xl">local_fire_department</span>
+</div>
+<!-- Regional Doodle Illustration Lockup -->
+<div class="w-16 h-16 mx-auto mb-3 bg-primary-fixed rounded-full border-2 border-on-surface flex items-center justify-center shadow-[3px_3px_0px_#1c1b1b]">
+<span class="text-3xl">🌶️</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-extrabold text-on-surface">
+                  Your code hasn't felt the heat yet.
+                </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto mt-1">
+                  Hit <strong class="text-on-surface">"Roast Me / भाजून काढ"</strong> to summon Nashik’s sharpest tech critiques. We'll dismantle your promises, shame your null checks, and write the spicy fix!
+                </p>
+<!-- Quick Preview Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mt-4 text-left">
+<div class="bg-surface-container p-2.5 rounded-[12px] border-2 border-on-surface shadow-[2px_2px_0px_#1c1b1b]">
+<p class="font-label-badge text-label-badge text-[#D9503F] font-extrabold uppercase">🔥 The Burn</p>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Existential critique of your variable naming sins.</p>
+</div>
+<div class="bg-surface-container p-2.5 rounded-[12px] border-2 border-on-surface shadow-[2px_2px_0px_#1c1b1b]">
+<p class="font-label-badge text-label-badge text-[#4FA35A] font-extrabold uppercase">🛠️ Masala Fix</p>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Clean refactored solution with proper typing &amp; tests.</p>
+</div>
+<div class="bg-surface-container p-2.5 rounded-[12px] border-2 border-on-surface shadow-[2px_2px_0px_#1c1b1b]">
+<p class="font-label-badge text-label-badge text-[#1658c7] font-extrabold uppercase">📊 Heat Index</p>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Spicy metric scoring your bug density from 1 to 10.</p>
+</div>
+</div>
+</div>
+<!-- Quick Demo Trigger Card -->
+<div class="bg-primary-fixed border-2 border-on-surface rounded-[18px] p-3.5 shadow-[3px_3px_0px_#1c1b1b] flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="text-xl">💡</span>
+<p class="font-body-md text-body-sm font-semibold text-on-surface">Want to test right away with a gnarly async bug?</p>
+</div>
+<button class="bg-surface-container-lowest hover:bg-surface-container border-2 border-on-surface px-3 py-1 rounded-full font-label-code text-body-sm font-bold text-on-surface shadow-[2px_2px_0px_#1c1b1b] active:translate-x-0.5 active:translate-y-0.5" id="quickRoastSampleBtn">
+                  ⚡ Roast Preloaded Code
+                </button>
+</div>
+</div>
+<!-- ACTIVE ROAST STATE (Hidden by default, shown on Roast Me click) -->
+<div class="hidden space-y-4" id="activeReportContainer">
+<!-- Roast Score Banner -->
+<div class="bg-surface-container-lowest border-2 border-on-surface rounded-[18px] p-4 shadow-[4px_4px_0px_#1c1b1b]">
+<div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+<span class="font-label-badge text-label-badge font-bold px-2 py-0.5 rounded bg-error-container text-on-error-container border border-on-surface">
+                    ZANZANIT LEVEL: 9.4/10 SPICY 🌶️🌶️🌶️
+                  </span>
+<span class="font-label-code text-body-sm text-on-surface-variant font-bold">Diagnosed in 142ms</span>
+</div>
+<!-- Multi-segment Roast Meter Bar -->
+<div class="w-full h-4 bg-surface-container rounded-full border-2 border-on-surface overflow-hidden flex shadow-[inset_1px_1px_0px_#1c1b1b]">
+<div class="w-[20%] bg-[#4FA35A] border-r-2 border-on-surface" title="Syntax Safe"></div>
+<div class="w-[30%] bg-[#EDB13E] border-r-2 border-on-surface" title="Smell Alert"></div>
+<div class="w-[45%] bg-[#D9503F] border-r-2 border-on-surface animate-pulse" title="Total Misal Meltdown"></div>
+<div class="w-[5%] bg-surface-container"></div>
+</div>
+</div>
+<!-- Card 1: The Burn (Persona Roast) -->
+<div class="bg-surface-container-lowest border-2 border-on-surface rounded-[18px] p-4 shadow-[4px_4px_0px_#1c1b1b] relative">
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-sm text-headline-sm font-bold text-[#D9503F] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">local_fire_department</span>
+                    THE SENIOR DEV VERDICT (काका Mode)
+                  </span>
+<span class="font-label-badge text-[11px] bg-secondary-fixed text-on-surface px-2 py-0.5 rounded-full border border-on-surface">Nashik HQ</span>
+</div>
+<blockquote class="font-body-md text-body-md text-on-surface font-medium border-l-4 border-[#D9503F] pl-3 py-1 italic bg-surface-container-low rounded-r-lg">
+                  "अरे देवा! An `async` inside a synchronous `.forEach()`? What did the JavaScript event loop ever do to hurt you? You are firing 50 background fetches into the void and immediately returning total = 0! Even College Road tapri chai boils with more structure than this promise chaos!"
+                </blockquote>
+<div class="mt-2.5 flex items-center gap-2 flex-wrap">
+<span class="font-label-badge text-[11px] font-bold px-2 py-0.5 rounded bg-error-container text-on-error-container border border-on-surface">forEach Async Void</span>
+<span class="font-label-badge text-[11px] font-bold px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed border border-on-surface">String Comparison with NaN</span>
+<span class="font-label-badge text-[11px] font-bold px-2 py-0.5 rounded bg-secondary-fixed text-on-surface border border-on-surface">Silent Undefined Crash</span>
+</div>
+</div>
+<!-- Card 2: The Masala Fix (Refactored Code) -->
+<div class="bg-surface-container-lowest border-2 border-on-surface rounded-[18px] p-4 shadow-[4px_4px_0px_#1c1b1b]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-sm text-headline-sm font-bold text-[#4FA35A] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">verified</span>
+                    THE REFACTORED FIX (MASALA SPECIAL)
+                  </span>
+<button class="flex items-center gap-1 font-label-code text-body-sm font-bold bg-surface-container hover:bg-surface-container-high border-2 border-on-surface px-2 py-0.5 rounded-full shadow-[2px_2px_0px_#1c1b1b]" id="copyFixBtn">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+<span>COPY FIX</span>
+</button>
+</div>
+<div class="bg-surface-container border-2 border-on-surface rounded-[12px] p-3 font-label-code text-body-sm text-on-surface overflow-x-auto custom-scroll leading-relaxed">
+<pre class="m-0"><span class="text-[#1658c7] font-bold">async function</span> <span class="text-[#7d5700] font-bold">calculateMisalDiscount</span>(cart: Cart): Promise&lt;number&gt; {
+  <span class="text-secondary">// Concurrent safe resolution with Promise.all</span>
+  <span class="text-[#1658c7] font-bold">const</span> itemTotals = <span class="text-[#1658c7] font-bold">await</span> Promise.all(
+    cart.items.map(<span class="text-[#1658c7] font-bold">async</span> (item) =&gt; {
+      <span class="text-[#1658c7] font-bold">const</span> res = <span class="text-[#1658c7] font-bold">await</span> fetch(`/api/misal-rate/${item.id}`);
+      <span class="text-[#1658c7] font-bold">const</span> { data } = <span class="text-[#1658c7] font-bold">await</span> res.json();
+      <span class="text-[#1658c7] font-bold">return</span> (data?.amount ?? 0) * item.quantity;
+    })
+  );
+
+  <span class="text-[#1658c7] font-bold">const</span> total = itemTotals.reduce((acc, curr) =&gt; acc + curr, 0);
+  <span class="text-[#1658c7] font-bold">const</span> discount = cart.user?.discount ?? 0;
+  <span class="text-[#1658c7] font-bold">return</span> Math.max(0, total - discount);
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Pane Footer Actions -->
+<div class="mt-4 pt-3 border-t-2 border-on-surface flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 font-label-badge text-[12px] text-on-surface font-semibold">
+<span class="material-symbols-outlined text-sm text-[#4C80F0]">verified_user</span>
+<span>DevFest Nashik 2026 AI Engine · Zero Data Retained</span>
+</div>
+<button class="flex items-center gap-1 font-label-code text-body-sm font-bold bg-primary-fixed hover:bg-primary-container border-2 border-on-surface px-3 py-1 rounded-full shadow-[2px_2px_0px_#1c1b1b] active:translate-x-0.5 active:translate-y-0.5" id="shareRoastBtn">
+<span class="material-symbols-outlined text-xs">share</span>
+<span>SHARE ROAST CARD</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= FESTIVE COMMUNITY TICKER STRIP ================= -->
+<div class="my-6 overflow-hidden rounded-[16px] border-[3px] border-on-surface bg-primary-fixed shadow-[4px_4px_0px_#1c1b1b] py-2.5">
+<div class="flex items-center justify-around gap-6 flex-wrap font-label-badge text-body-sm font-extrabold uppercase tracking-wider text-on-surface px-4">
+<span class="flex items-center gap-1.5">
+<span class="text-lg">🍇</span> NASHIK TECH CORRIDOR
+        </span>
+<span class="text-on-surface-variant">·</span>
+<span class="flex items-center gap-1.5">
+<span class="text-lg">🥣</span> 100% झणझणीत MISAL POWERED
+        </span>
+<span class="text-on-surface-variant">·</span>
+<span class="flex items-center gap-1.5">
+<span class="text-lg">⚡</span> GDG DEVFEST 2026 SPECIAL
+        </span>
+<span class="text-on-surface-variant">·</span>
+<span class="flex items-center gap-1.5">
+<span class="text-lg">🔥</span> OVER 4,200 SPAGHETTI BUGS BURNT
+        </span>
+</div>
+</div>
+<!-- ================= QUICK FEATURE CARDS (Bento Grid) ================= -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-[22px] border-[3px] border-on-surface shadow-[4px_4px_0px_#1c1b1b] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform">
+<div class="w-10 h-10 bg-secondary-fixed rounded-full border-2 border-on-surface flex items-center justify-center font-bold text-xl mb-3 shadow-[2px_2px_0px_#1c1b1b]">
+          🌶️
+        </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Regional Personas</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-1.5">
+          Switch between sympathetic tapri interns, Godavari river poets, or unhinged Silicon Valley tech leads demanding 100% test coverage.
+        </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-[22px] border-[3px] border-on-surface shadow-[4px_4px_0px_#1c1b1b] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform">
+<div class="w-10 h-10 bg-primary-fixed rounded-full border-2 border-on-surface flex items-center justify-center font-bold text-xl mb-3 shadow-[2px_2px_0px_#1c1b1b]">
+          ⚡
+        </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Instant AST Diagnosis</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-1.5">
+          Not just insults—real Abstract Syntax Tree audits that spotlight race conditions, unmemoized hooks, and accidental O(N²) iterations.
+        </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-[22px] border-[3px] border-on-surface shadow-[4px_4px_0px_#1c1b1b] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform">
+<div class="w-10 h-10 bg-tertiary-fixed rounded-full border-2 border-on-surface flex items-center justify-center font-bold text-xl mb-3 shadow-[2px_2px_0px_#1c1b1b]">
+          🎟️
+        </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">DevFest Nashik Swag</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-1.5">
+          Roast your repo during DevFest, claim your custom sticker pack at the community booth, and feature on the live community wall!
+        </p>
+</div>
+</section>
+</main>
+<!-- ================= FOOTER (Shared Component) ================= -->
+<footer class="w-full mt-20 border-t-[3px] border-on-surface bg-surface-container-low shadow-[0px_-4px_0px_#1c1b1b]">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-8 max-w-7xl mx-auto gap-4">
+<!-- Brand & Copyright -->
+<div class="text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-2 mb-1">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">CODE ROASTER</span>
+<span class="bg-primary-container text-on-primary-container font-label-badge text-[11px] font-bold px-2 py-0.5 rounded-full border border-on-surface">v2026.1</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          © 2026 GDG Nashik · DevFest Community Edition. Built with Chai, Misal &amp; Code Roasts.
+        </p>
+</div>
+<!-- Footer Navigation Links -->
+<div class="flex items-center flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant hover:text-on-surface font-label-code text-body-sm hover:underline transition-colors" href="#code-of-conduct">
+          Code of Conduct
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-code text-body-sm hover:underline transition-colors" href="#gdg-nashik">
+          GDG Nashik Community
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-code text-body-sm hover:underline transition-colors" href="#warli-spec">
+          Warli Doodles Spec
+        </a>
+<a class="text-primary underline underline-offset-4 font-label-code text-body-sm font-bold" href="#submit-prompt">
+          Submit a Roast Prompt
+        </a>
+</div>
+</div>
+</footer>
+<!-- ================= INLINE INTERACTION SCRIPT ================= -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const roastTriggerBtn = document.getElementById('roastTriggerBtn');
+      const navRoastCTA = document.getElementById('navRoastCTA');
+      const quickRoastSampleBtn = document.getElementById('quickRoastSampleBtn');
+      const readyStateContainer = document.getElementById('readyStateContainer');
+      const activeReportContainer = document.getElementById('activeReportContainer');
+      const reportStatusBadge = document.getElementById('reportStatusBadge');
+      const toggleErrorBtn = document.getElementById('toggleErrorBtn');
+      const errorInputWrapper = document.getElementById('errorInputWrapper');
+      const closeErrorInput = document.getElementById('closeErrorInput');
+      const clearEditorBtn = document.getElementById('clearEditorBtn');
+      const loadSampleBugBtn = document.getElementById('loadSampleBugBtn');
+      const codeEditorArea = document.getElementById('codeEditorArea');
+      const copyFixBtn = document.getElementById('copyFixBtn');
+      const pasteCodeBtn = document.getElementById('pasteCodeBtn');
+      const spiceButtons = document.querySelectorAll('.spice-btn');
+
+      // Spice button toggle state
+      spiceButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          spiceButtons.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary-container', 'border-2', 'border-on-surface', 'shadow-[2px_2px_0px_#1c1b1b]', 'font-bold');
+            b.classList.add('font-semibold');
+          });
+          btn.classList.add('bg-primary-container', 'text-on-primary-container', 'border-2', 'border-on-surface', 'shadow-[2px_2px_0px_#1c1b1b]', 'font-bold');
+          btn.classList.remove('font-semibold');
+        });
+      });
+
+      // Roast Execution Function
+      function executeRoast() {
+        if (!codeEditorArea.value.trim()) {
+          alert('कृपया कोड टाका! Please drop some code to roast!');
+          return;
+        }
+
+        reportStatusBadge.innerHTML = `
+          <span class="w-2 h-2 rounded-full bg-[#D9503F] animate-ping"></span>
+          <span>ROASTING IN PROGRESS 🔥</span>
+        `;
+        reportStatusBadge.classList.replace('bg-primary-fixed', 'bg-error-container');
+
+        setTimeout(() => {
+          readyStateContainer.classList.add('hidden');
+          activeReportContainer.classList.remove('hidden');
+          reportStatusBadge.innerHTML = `
+            <span class="w-2 h-2 rounded-full bg-[#4FA35A]"></span>
+            <span>ROAST SERVED FRESH 🌶️</span>
+          `;
+          reportStatusBadge.classList.replace('bg-error-container', 'bg-primary-container');
+        }, 350);
+      }
+
+      // Attach Roast Action
+      roastTriggerBtn.addEventListener('click', executeRoast);
+      navRoastCTA.addEventListener('click', () => {
+        window.scrollTo({ top: 200, behavior: 'smooth' });
+        executeRoast();
+      });
+      quickRoastSampleBtn.addEventListener('click', executeRoast);
+
+      // Error Log Field Toggle
+      toggleErrorBtn.addEventListener('click', () => {
+        errorInputWrapper.classList.toggle('hidden');
+      });
+      closeErrorInput.addEventListener('click', () => {
+        errorInputWrapper.classList.add('hidden');
+      });
+
+      // Clear & Sample Buttons
+      clearEditorBtn.addEventListener('click', () => {
+        codeEditorArea.value = '';
+        codeEditorArea.focus();
+      });
+
+      loadSampleBugBtn.addEventListener('click', () => {
+        codeEditorArea.value = `// DevFest Nashik 2026 - Memory leak sample
+function monitorParticipantCheckins(badgeStream) {
+  let attendees = [];
+  badgeStream.on("scan", (badge) => {
+    // ⚠️ Bug: Appending circular references without GC
+    attendees.push({ badge, timestamp: Date.now(), streamRef: badgeStream });
+    if (attendees.length > 5000) {
+      console.log("Memory high, but doing nothing!");
+    }
+  });
+  return attendees;
+}`;
+      });
+
+      // Copy Fix
+      copyFixBtn.addEventListener('click', () => {
+        const fixCode = `async function calculateMisalDiscount(cart: Cart): Promise<number> {
+  const itemTotals = await Promise.all(
+    cart.items.map(async (item) => {
+      const res = await fetch(\`/api/misal-rate/\${item.id}\`);
+      const { data } = await res.json();
+      return (data?.amount ?? 0) * item.quantity;
+    })
+  );
+
+  const total = itemTotals.reduce((acc, curr) => acc + curr, 0);
+  const discount = cart.user?.discount ?? 0;
+  return Math.max(0, total - discount);
+}`;
+        navigator.clipboard.writeText(fixCode);
+        copyFixBtn.innerHTML = `
+          <span class="material-symbols-outlined text-xs">check</span>
+          <span>COPIED!</span>
+        `;
+        setTimeout(() => {
+          copyFixBtn.innerHTML = `
+            <span class="material-symbols-outlined text-xs">content_copy</span>
+            <span>COPY FIX</span>
+          `;
+        }, 1800);
+      });
+
+      // Quick Paste simulation
+      pasteCodeBtn.addEventListener('click', async () => {
+        try {
+          const text = await navigator.clipboard.readText();
+          if (text) codeEditorArea.value = text;
+        } catch {
+          codeEditorArea.focus();
+        }
+      });
+    });
+  </script>
+</body></html>
